@@ -58,3 +58,9 @@ class Credentials:
         self.App = App
         self.Username = Username
         self.Password = Password
+
+    def save_info(self):
+        """
+        method to store a new credential to the credentials list
+        """
+        Credentials.Credentials_list.append(self)
