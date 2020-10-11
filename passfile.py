@@ -40,6 +40,17 @@ class Credentials:
 
     Credentials_list = []
 
+    @classmethod
+    def true_user(cls, Username, Password):
+        """
+        method to confirm the user in the app
+        """
+        the_user = ""
+        for Username in User.User_list:
+            if(Username.username == Username and Username.Password == Password):
+                the_user == Username.username
+        return the_user
+
     def __init__(self, App, Username, Password):
 
       # docstring removed for simplicity
