@@ -25,7 +25,7 @@ class User:
         '''
         return cls.User_list
 
-    def delete_User(self):
+    def delete_user(self):
         '''
         delete_User method deletes a saved User account from the User_list
         '''

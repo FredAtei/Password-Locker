@@ -23,3 +23,6 @@ def del_User(User):
     Function to delete a contact
     '''
     User.delete_User()
+
+
+def

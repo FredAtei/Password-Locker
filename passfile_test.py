@@ -40,6 +40,12 @@ class TestUser (unittest.TestCase):
         '''
         self.assertEqual(User.display_user(), User.User_list)
 
+    def delete_user(self):
+        '''
+        delete_contact method deletes a saved contact from the contact_list
+        '''
+        User.User_list.remove(self)
+
 
 class testCredentials(unittest.TestCase):
     '''
