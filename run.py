@@ -74,3 +74,8 @@ def display_credentials():
     Function that returns all the saved contacts
     '''
     return Credentials.display_credentials()
+
+
+if __name__ == '__main__':
+
+    main()
