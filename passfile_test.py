@@ -1,5 +1,5 @@
 import unittest
-from pass_test import User
+from passfile import User
 
 
 class TestUser (unittest.TestCase):
@@ -15,15 +15,15 @@ class TestUser (unittest.TestCase):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_User = User("Fred", "a1B2c3D4e")  # create contact object
+        self.new_user = User("Fred", "a1B2c3D4e")  # create contact object
 
     def test_init(self):
         '''
         test_init test case to test if the object is initialized properly
         '''
 
-        self.assertEqual(self.new_User.Username, "James")
-        self.assertEqual(self.new_User.Password, "a1B2c3D4e")
+        self.assertEqual(self.new_user.Username, "Fred")
+        self.assertEqual(self.new_user.Password, "a1B2c3D4e")
 
 
 if __name__ == '__main__':
