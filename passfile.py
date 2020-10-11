@@ -61,3 +61,18 @@ class Credentials:
         '''
 
         Credentials.Credentials_list.remove(self)
+
+    @classmethod
+    def find_credentials(cls, App):
+        '''
+        Method that takes in a Application and returns a credential that matches that Apllication.
+
+        Args:
+            App: Application to search for
+        Returns :
+            Credentials of person that matches the App.
+        '''
+
+        for Credentials in cls.Credentials_list:
+            if Credentials.App == App:
+                return Credentials
