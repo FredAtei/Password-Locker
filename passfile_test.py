@@ -62,6 +62,21 @@ class testCredentials(unittest.TestCase):
         self.new_credential.save_info()
         self.assertEqual(len(Credentials.Credentials_list), 1)
 
+    def tearDown(self):
+        '''
+        tearDown method that does clean up after each test case has run.
+        '''
+        Credentials.Credentials_list = []
+
+# other test cases here
+    def test_save_multiple_Credentials(self):
+
+        self.new_credential.save_info()
+        test_Credentials = Credentials("Instagram", "Fred",
+                                       "a1B2c3D4e")  # new contact
+        test_Credentials.save_info()
+        self.assertEqual(len(Credentials.Credentials_list), 2)
+
 
 if __name__ == '__main__':
     unittest.main()
