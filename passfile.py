@@ -10,3 +10,10 @@ class User:
       # docstring removed for simplicity
         self.Username = Username
         self.Password = Password
+
+    def save_user(self):
+        '''
+        save_contact method saves contact objects into contact_list
+        '''
+
+        User.User_list.append(self)
