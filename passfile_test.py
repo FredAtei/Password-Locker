@@ -1,5 +1,6 @@
 import unittest
 from passfile import User
+from passfile import Credentials
 
 
 class TestUser (unittest.TestCase):

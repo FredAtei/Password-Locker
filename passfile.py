@@ -25,6 +25,13 @@ class User:
         '''
         return cls.User_list
 
+    def delete_contact(self):
+        '''
+        delete_contact method deletes a saved User account from the User_list
+        '''
+
+        User.User_list.remove(self)
+
 
 class Credentials:
     """
