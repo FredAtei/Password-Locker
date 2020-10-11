@@ -103,6 +103,20 @@ class testCredentials(unittest.TestCase):
 
         self.assertEqual(found_credential.App, test_Credentials.App)
 
+    def test_credentials_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the contact.
+        '''
+
+        self.new_credential.save_info()
+        test_Credentials = Credentials("Instagram", "Fred",
+                                       "a1B2c3D4e")  # new contact
+        test_Credentials.save_info()
+
+        credentials_exists = Credentials.credentials_exist("Instagram")
+
+        self.assertTrue(credentials_exists)
+
 
 if __name__ == '__main__':
     unittest.main()
