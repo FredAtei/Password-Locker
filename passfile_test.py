@@ -41,5 +41,22 @@ class TestUser (unittest.TestCase):
         self.assertEqual(User.display_user(), User.User_list)
 
 
+class testCredentials(unittest.TestCase):
+    '''
+    Test class that defines test cases for the credentials class behaviours.
+    '''
+
+    def setUp(self):
+
+        self.new_credential = Credentials(
+            "Instagram", "Fred", "a1B2c3D4e")
+
+    def test_init(self):
+
+        self.assertEqual(self.new_credential.App, 'Instagram')
+        self.assertEqual(self.new_credential.Username, 'Fred')
+        self.assertEqual(self.new_credential.Password, 'a1B2c3D4e')
+
+
 if __name__ == '__main__':
     unittest.main()
