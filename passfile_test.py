@@ -96,7 +96,7 @@ class testCredentials(unittest.TestCase):
 
         self.new_credential.save_info()
         test_Credentials = Credentials("Instagram", "Fred",
-                                       "a1B2c3D4e")  # new contact
+                                       "a1B2c3D4e")  # new credentials
         test_Credentials.save_info()
 
         found_credential = Credentials.find_credentials("Instagram")
@@ -105,17 +105,25 @@ class testCredentials(unittest.TestCase):
 
     def test_credentials_exists(self):
         '''
-        test to check if we can return a Boolean  if we cannot find the contact.
+        test to check if we can return a Boolean  if we cannot find the credentials.
         '''
 
         self.new_credential.save_info()
         test_Credentials = Credentials("Instagram", "Fred",
-                                       "a1B2c3D4e")  # new contact
+                                       "a1B2c3D4e")  # new credentials
         test_Credentials.save_info()
 
         credentials_exists = Credentials.credentials_exist("Instagram")
 
         self.assertTrue(credentials_exists)
+
+    def test_display_all_credentials(self):
+        '''
+        method that returns a list of all credentials saved
+        '''
+
+        self.assertEqual(Credentials.display_credentials(),
+                         Credentials.Credentials_list)
 
 
 if __name__ == '__main__':
