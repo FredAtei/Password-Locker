@@ -25,9 +25,9 @@ class User:
         '''
         return cls.User_list
 
-    def delete_contact(self):
+    def delete_User(self):
         '''
-        delete_contact method deletes a saved User account from the User_list
+        delete_User method deletes a saved User account from the User_list
         '''
 
         User.User_list.remove(self)
@@ -40,17 +40,6 @@ class Credentials:
 
     Credentials_list = []
 
-    # @classmethod
-    # def verify_user(cls, username, password):
-    #     """
-    #     method to verify whether the user is in our user_list or not
-    #     """
-    #     a_user = ""
-    #     for user in User.User_list:
-    #         if(user.username == username and user.password == password):
-    #             a_user == user.username
-    #     return a_user
-
     def __init__(self, App, Username, Password):
 
       # docstring removed for simplicity
@@ -60,5 +49,15 @@ class Credentials:
         self.Password = Password
 
     def save_info(self):
+        '''
+        save info allows to save details of the credentials we add
+        '''
 
         Credentials.Credentials_list.append(self)
+
+    def delete_credentials(self):
+        '''
+        delete_credentials method deletes a saved info from the credentials_list
+        '''
+
+        Credentials.Credentials_list.remove(self)
