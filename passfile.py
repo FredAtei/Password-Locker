@@ -24,3 +24,19 @@ class User:
         method that returns the contact list
         '''
         return cls.User_list
+
+
+class Credentials:
+    """
+    Class that generates new instances of user Credentials
+    """
+
+    Credentials_list = []
+
+    def __init__(self, App, Username, Password):
+
+      # docstring removed for simplicity
+
+        self.App = App
+        self.Username = Username
+        self.Password = Password
