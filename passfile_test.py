@@ -33,6 +33,12 @@ class TestUser (unittest.TestCase):
         self.new_user.save_user()  # saving the new user
         self.assertEqual(len(User.User_list), 1)
 
+    def test_display_all_user(self):
+        '''
+        method that returns a list of all users saved
+        '''
+        self.assertEqual(User.display_user(), User.User_list)
+
 
 if __name__ == '__main__':
     unittest.main()

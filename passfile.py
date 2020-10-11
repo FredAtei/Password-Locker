@@ -17,3 +17,10 @@ class User:
         '''
 
         User.User_list.append(self)
+
+    @classmethod
+    def display_user(cls):
+        '''
+        method that returns the contact list
+        '''
+        return cls.User_list
