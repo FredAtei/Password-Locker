@@ -9,10 +9,7 @@ This application was developed using Python and its functions as a password lock
 
 ## Author
 Fred Atei
-
-
-## Deploy
-Here is a working live demo : 
+ 
 
 ## BDD
 1. 
