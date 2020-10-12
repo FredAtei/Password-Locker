@@ -15,7 +15,7 @@ def save_user(User):
     '''
     Function to save contact
     '''
-    User.save_User()
+    User.save_user()
 
 
 def del_user(User):
@@ -181,13 +181,13 @@ def main():
 
             password = generate_Password()
             print(
-                f" {password} Has been generated succesfull. You can proceed to use it to your account")
+                f" {password} has been generated succesfull.")
         elif short_code == 'ex':
-            print("Thanks for using passwords store manager.. See you next time!")
+            print("Exiting App.. See you Soon!")
             break
         else:
             print(
-                "Wrong entry... Check your entry again and let it match those in the menu")
+                "Error... Please select entry provided")
     else:
         print("Please enter a valid input to continue")
 
