@@ -9,19 +9,6 @@ This application was developed using Python and its functions as a password lock
 
 ## Author
 Fred Atei
- 
-
-## BDD
-1. 
-
-2.  
-
-3. 
-
-4. 
-- 
-   
-5. 
 
 ### Development
 Want to contribute? Great!
