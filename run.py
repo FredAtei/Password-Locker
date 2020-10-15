@@ -41,11 +41,11 @@ def create_credentials(App, Username, Password):
     return new_credentials
 
 
-def save_credentials(credentials):
+def save_info(credentials):
     '''
     Function to save contact
     '''
-    credentials.save_credentials()
+    credentials.save_info()
 
 
 def del_credentials(credentails):
@@ -134,16 +134,16 @@ def main():
             while True:
                 print(
                     " ep - Enter password for existing app account:\n gp - To generate Password")
-                Password_type = input().lower().strip()
-                if Password_type == 'ep':
-                    password = input("Enter Your Password\n")
+                Password_Choice = input().lower().strip()
+                if Password_Choice == 'ep':
+                    Password = input("Enter your password\n")
                     break
-                elif Password_type == 'gp':
-                    password = generate_Password()
+                elif Password_Choice == 'gp':
+                    Password = generate_Password()
                     break
                 else:
                     print("Wrong password. Try again.")
-            save_credentials(create_credentials(
+            save_info(create_credentials(
                 App, Username, Password))
             print('\n')
             print(
